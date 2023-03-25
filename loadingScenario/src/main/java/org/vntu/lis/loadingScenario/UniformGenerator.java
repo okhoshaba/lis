@@ -23,10 +23,4 @@ public class UniformGenerator implements ICoordX {
         return arrayList;
     }
 
-    @Override
-    public String toString() {
-        return "UniformGenerator {" +
-                "arrayList=" + getArrayListX() +
-                '}';
-    }
 }
