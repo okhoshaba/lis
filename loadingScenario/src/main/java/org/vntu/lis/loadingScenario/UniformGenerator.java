@@ -8,13 +8,15 @@ public class UniformGenerator implements ICoordX {
     public Long getX() {
         return 0L;
     }
-    public void setArrayListX(long step, int number) {
-        for (int count = 0; count < number; count++) {
-            this.arrayList.add((long) count * step);
-        }
-//        this.arrayList.add(1000L);
-//        this.arrayList.add(2000L);
-//        this.arrayList.add((long) 3000L);
+    public void setArrayListX(long step, int number, int period) {
+        int localPeriod = 0;
+        long coord = 0L;
+
+        while (localPeriod++ < period)
+            for (int count = 0; count < number; count++) {
+                coord += (long) count * step;
+                this.arrayList.add(coord);
+            }
     }
 
     public ArrayList<Long> getArrayListX() {

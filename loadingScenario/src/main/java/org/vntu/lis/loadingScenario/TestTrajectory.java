@@ -13,12 +13,10 @@ public class TestTrajectory {
         coordX.defineX();
         System.out.println(coordX.getNameX());
         System.out.println(coordX.getStep());
-//        System.out.println(coordX.getLength());
 
         UniformGenerator uniformGenerator = new UniformGenerator();
-        // Insert parameters for setArrayList method...
-        //
-        uniformGenerator.setArrayListX(coordX.getStep(), coordX.getNumber());
+
+        uniformGenerator.setArrayListX(coordX.getStep(), coordX.getNumber(), coordX.getPeriod());
         System.out.println(uniformGenerator.toString());
         System.out.println(uniformGenerator.getArrayListX());
         context.close();

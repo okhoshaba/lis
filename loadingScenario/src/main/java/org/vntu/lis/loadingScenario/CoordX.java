@@ -43,7 +43,7 @@ public class CoordX {
         return period;
     }
 
-    public void setPeriodX(int period) {
+    public void setPeriod(int period) {
         this.period = period;
     }
 
@@ -53,10 +53,6 @@ public class CoordX {
 
     public int getNumber() {
         return this.number;
-    }
-
-    public void setPeriod(int period) {
-        this.period = period;
     }
 
     void defineX() {
