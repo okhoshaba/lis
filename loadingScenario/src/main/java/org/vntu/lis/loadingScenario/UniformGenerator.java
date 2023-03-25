@@ -8,9 +8,9 @@ public class UniformGenerator implements ICoordX {
     public Long getX() {
         return 0L;
     }
-    public void setArrayListX(long stepX, int numberX) {
-        for (int count = 0; count < numberX; count++) {
-            this.arrayList.add((long) count * stepX);
+    public void setArrayListX(long step, int number) {
+        for (int count = 0; count < number; count++) {
+            this.arrayList.add((long) count * step);
         }
 //        this.arrayList.add(1000L);
 //        this.arrayList.add(2000L);

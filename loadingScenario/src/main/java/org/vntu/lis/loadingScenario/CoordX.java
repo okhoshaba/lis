@@ -8,8 +8,8 @@ public class CoordX {
 
     private ICoordX iCoordX;
     private String nameX;
-    private Long stepX = 0L, lengthX=0L;
-    private int numberX = 0, periodX = 1;
+    private Long step = 0L;
+    private int number = 0, period = 1000;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -31,39 +31,35 @@ public class CoordX {
         this.nameX = nameX;
     }
 
-    public Long getStepX() {
-        return stepX;
+    public Long getStep() {
+        return step;
     }
 
-    public void setStepX(Long stepX) {
-        this.stepX = stepX;
+    public void setStep(Long step) {
+        this.step = step;
     }
 
-    public Long getLengthX() {
-        return lengthX;
+    public int getPeriod() {
+        return period;
     }
 
-    public void setLengthX(Long lengthX) {
-        this.lengthX = lengthX;
+    public void setPeriodX(int period) {
+        this.period = period;
     }
 
-    public int getPeriodX() {
-        return periodX;
+    public void setNumber(int number) {
+        this.number = number;
     }
 
-    public void setPeriodX(int periodX) {
-        this.periodX = periodX;
+    public int getNumber() {
+        return this.number;
     }
 
-    public void setNumberX(int numberX) {
-        this.numberX = numberX;
-    }
-
-    public int getNumberX() {
-        return this.numberX;
+    public void setPeriod(int period) {
+        this.period = period;
     }
 
     void defineX() {
-        System.out.println("Coordinates X: " + iCoordX.getX());
-    }
+            System.out.println("Coordinates X: " + iCoordX.getX());
+        }
 }
