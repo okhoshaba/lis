@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class CoordX {
 
-    private ArrayList<Long> listX = new ArrayList<Long>();
+    private ArrayList<Long> arrayListX = new ArrayList<Long>();
 
     private ICoordX iCoordX;
     private String nameX;
