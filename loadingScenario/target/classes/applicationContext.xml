@@ -16,9 +16,9 @@
           class="org.vntu.lis.loadingScenario.CoordX">
         <property name="ICoordX" ref="xTrajectoryBean"/>
         <property name="nameX" value="${coordX.nameX}"/>
-        <property name="stepX" value="${coordX.stepX}"/>
-        <property name="numberX" value="${coordX.numberX}"/>
-        <property name="lengthX" value="${coordX.lengthX}"/>
+        <property name="step" value="${coordX.step}"/>
+        <property name="number" value="${coordX.number}"/>
+        <property name="period" value="${coordX.period}"/>
     </bean>
 
 
