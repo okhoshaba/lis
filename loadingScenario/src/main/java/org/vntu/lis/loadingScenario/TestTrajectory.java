@@ -16,6 +16,7 @@ public class TestTrajectory {
         System.out.println(coordX.getLengthX());
 
         UniformGenerator uniformGenerator = new UniformGenerator();
+        uniformGenerator.setArrayListX();
         System.out.println(uniformGenerator.toString());
         System.out.println(uniformGenerator.getArrayListX());
         context.close();

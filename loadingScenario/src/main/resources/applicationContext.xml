@@ -17,6 +17,7 @@
         <property name="ICoordX" ref="xTrajectoryBean"/>
         <property name="nameX" value="${coordX.nameX}"/>
         <property name="stepX" value="${coordX.stepX}"/>
+        <property name="numberX" value="${coordX.numberX}"/>
         <property name="lengthX" value="${coordX.lengthX}"/>
     </bean>
 

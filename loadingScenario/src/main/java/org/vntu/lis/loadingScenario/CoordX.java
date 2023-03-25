@@ -9,7 +9,7 @@ public class CoordX {
     private ICoordX iCoordX;
     private String nameX;
     private Long stepX = 0L, lengthX=0L;
-    private int numbers = 0;
+    private int numberX = 0, periodX = 1;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -45,6 +45,22 @@ public class CoordX {
 
     public void setLengthX(Long lengthX) {
         this.lengthX = lengthX;
+    }
+
+    public int getPeriodX() {
+        return periodX;
+    }
+
+    public void setPeriodX(int periodX) {
+        this.periodX = periodX;
+    }
+
+    public void setNumberX(int numberX) {
+        this.numberX = numberX;
+    }
+
+    public int getNumberX() {
+        return this.numberX;
     }
 
     void defineX() {
