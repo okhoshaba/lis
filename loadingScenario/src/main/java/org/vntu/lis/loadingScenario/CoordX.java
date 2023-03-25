@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public class CoordX {
 
-    private ArrayList<float> listICoordX = new ArrayList<float>();
+    private ArrayList<Long> listX = new ArrayList<Long>();
 
     private ICoordX iCoordX;
     private String nameX;
-    private Float stepX, lengthX;
+    private Long stepX, lengthX;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -30,19 +30,19 @@ public class CoordX {
         this.nameX = nameX;
     }
 
-    public Float getStepX() {
+    public Long getStepX() {
         return stepX;
     }
 
-    public void setStepX(Float stepX) {
+    public void setStepX(Long stepX) {
         this.stepX = stepX;
     }
 
-    public Float getLengthX() {
+    public Long getLengthX() {
         return lengthX;
     }
 
-    public void setLengthX(Float lengthX) {
+    public void setLengthX(Long lengthX) {
         this.lengthX = lengthX;
     }
 
