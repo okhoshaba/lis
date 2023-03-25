@@ -18,6 +18,7 @@
         <property name="nameX" value="${coordX.nameX}"/>
         <property name="step" value="${coordX.step}"/>
         <property name="number" value="${coordX.number}"/>
+        <property name="series" value="${coordX.series}"/>
         <property name="period" value="${coordX.period}"/>
     </bean>
 

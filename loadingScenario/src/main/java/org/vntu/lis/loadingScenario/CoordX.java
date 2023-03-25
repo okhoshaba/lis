@@ -9,7 +9,7 @@ public class CoordX {
     private ICoordX iCoordX;
     private String nameX;
     private Long step = 0L;
-    private int number = 0, period = 1000;
+    private int number = 0, period = 1000, series = 1;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -53,6 +53,14 @@ public class CoordX {
 
     public int getNumber() {
         return this.number;
+    }
+
+    public int getSeries() {
+        return series;
+    }
+
+    public void setSeries(int series) {
+        this.series = series;
     }
 
     void defineX() {
