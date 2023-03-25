@@ -8,7 +8,8 @@ public class CoordX {
 
     private ICoordX iCoordX;
     private String nameX;
-    private Long stepX, lengthX;
+    private Long stepX = 0L, lengthX=0L;
+    private int numbers = 0;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
