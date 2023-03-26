@@ -16,7 +16,7 @@ public class TestTrajectory {
 
         ClassicUniformGenerator classicUniformGenerator = new ClassicUniformGenerator();
 
-        classicUniformGenerator.setArrayListX(coordX.getStep(), coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        classicUniformGenerator.setArrayListX(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
 
         System.out.println(classicUniformGenerator.toString());
         System.out.println(classicUniformGenerator.getArrayListX());
