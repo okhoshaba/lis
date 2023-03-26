@@ -2,12 +2,11 @@ package org.vntu.lis.loadingScenario;
 
 import java.util.ArrayList;
 
-public class ClassicUniformGenerator implements ICoordX {
-     final private ArrayList<Long> arrayList = new ArrayList<Long>();
+public class DefineUniformGenerator implements ICoordX {
+    final private ArrayList<Long> arrayList = new ArrayList<Long>();
 
-    public void setArrayListX(int number, int period, int series) {
-// Add check for right period later...
-        long step = (long) period/number;
+    public void setArrayListX(int step, int period, int series) {
+        int number = (int) period/step;
 
         int localSeries = -1;
 
