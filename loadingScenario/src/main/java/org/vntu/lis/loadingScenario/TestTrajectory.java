@@ -16,12 +16,12 @@ public class TestTrajectory {
         System.out.println(coordX.getNameX());
         System.out.println(coordX.getStep());
 
-        ClassicUniformGenerator classicUniformGenerator = new ClassicUniformGenerator();
+        ICoordX classicUniformGenerator = new ClassicUniformGenerator();
         classicUniformGenerator.setArrayListX(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         System.out.println(classicUniformGenerator.toString());
         System.out.println(classicUniformGenerator.getArrayListX());
 
-        DefineUniformGenerator defineUniformGenerator = new DefineUniformGenerator();
+        ICoordX defineUniformGenerator = new DefineUniformGenerator();
         defineUniformGenerator.setArrayListX(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
         System.out.println(defineUniformGenerator.toString());
         System.out.println(defineUniformGenerator.getArrayListX());
