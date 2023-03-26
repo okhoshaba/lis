@@ -1,5 +1,7 @@
 package org.vntu.lis.loadingScenario;
 
+import java.util.ArrayList;
+
 public interface ICoordX {
-    Long getX();
+    ArrayList<Long> getArrayListX();
 }
