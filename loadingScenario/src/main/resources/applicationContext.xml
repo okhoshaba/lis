@@ -9,7 +9,7 @@
 
     <context:property-placeholder location="classpath:trajectory.properties"/>
     <bean id="xTrajectoryBean"
-          class="org.vntu.lis.loadingScenario.UniformGenerator">
+          class="org.vntu.lis.loadingScenario.ClassicUniformGenerator">
     </bean>
 
     <bean id="coordX"

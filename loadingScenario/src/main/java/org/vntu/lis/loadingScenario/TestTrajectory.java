@@ -14,12 +14,12 @@ public class TestTrajectory {
         System.out.println(coordX.getNameX());
         System.out.println(coordX.getStep());
 
-        UniformGenerator uniformGenerator = new UniformGenerator();
+        ClassicUniformGenerator classicUniformGenerator = new ClassicUniformGenerator();
 
-        uniformGenerator.setArrayListX(coordX.getStep(), coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        classicUniformGenerator.setArrayListX(coordX.getStep(), coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
 
-        System.out.println(uniformGenerator.toString());
-        System.out.println(uniformGenerator.getArrayListX());
+        System.out.println(classicUniformGenerator.toString());
+        System.out.println(classicUniformGenerator.getArrayListX());
         context.close();
     }
 }
