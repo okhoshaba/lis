@@ -10,16 +10,22 @@ public class TestTrajectory {
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
 
+        // For diagnose purposes only  ??? It needs to be in a separate group
+        // (For example: Diagnose input parameters).
         coordX.defineX();
         System.out.println(coordX.getNameX());
         System.out.println(coordX.getStep());
 
         ClassicUniformGenerator classicUniformGenerator = new ClassicUniformGenerator();
-
         classicUniformGenerator.setArrayListX(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
-
         System.out.println(classicUniformGenerator.toString());
         System.out.println(classicUniformGenerator.getArrayListX());
+
+        DefineUniformGenerator defineUniformGenerator = new DefineUniformGenerator();
+        defineUniformGenerator.setArrayListX(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
+        System.out.println(defineUniformGenerator.toString());
+        System.out.println(defineUniformGenerator.getArrayListX());
+
         context.close();
     }
 }

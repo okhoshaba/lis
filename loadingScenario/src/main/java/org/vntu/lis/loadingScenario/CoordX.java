@@ -8,8 +8,8 @@ public class CoordX {
 
     private ICoordX iCoordX;
     private String nameX;
-    private Long step = 0L;
-    private int number = 0, period = 1000, series = 1;
+//    private int step = 0;
+    private int number = 0, period = 1000, series = 1, step = 0;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -31,11 +31,11 @@ public class CoordX {
         this.nameX = nameX;
     }
 
-    public Long getStep() {
+    public int getStep() {
         return step;
     }
 
-    public void setStep(Long step) {
+    public void setStep(int step) {
         this.step = step;
     }
 

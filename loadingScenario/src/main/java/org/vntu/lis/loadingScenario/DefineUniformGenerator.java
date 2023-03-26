@@ -10,6 +10,7 @@ public class DefineUniformGenerator implements ICoordX {
 
         int localSeries = -1;
 
+        // Check it!
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++)
                 this.arrayList.add((long) count * step + period * localSeries);
