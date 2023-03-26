@@ -10,6 +10,13 @@ public class PoissonGenerator implements ICoordX {
     }
 
     /**
+     * @param parameters
+     */
+    public void setArrayListX(int... parameters) {
+
+    }
+
+    /**
      * @param firstOption
      * @param secondOption
      * @param thirdOption

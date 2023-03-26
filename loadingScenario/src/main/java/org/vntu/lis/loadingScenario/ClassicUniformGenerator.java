@@ -20,4 +20,11 @@ public class ClassicUniformGenerator implements ICoordX {
         return arrayList;
     }
 
+    /**
+     * @param parameters
+     */
+    public void setArrayListX(int... parameters) {
+
+    }
+
 }

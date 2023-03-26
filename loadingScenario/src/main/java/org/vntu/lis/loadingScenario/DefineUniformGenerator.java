@@ -6,7 +6,7 @@ public class DefineUniformGenerator implements ICoordX {
     final private ArrayList<Long> arrayList = new ArrayList<Long>();
 
     public void setArrayListX(int step, int period, int series) {
-        int number = (int) period/step;
+        int number = period/step;
 
         int localSeries = -1;
 
@@ -18,6 +18,14 @@ public class DefineUniformGenerator implements ICoordX {
 
     public ArrayList<Long> getArrayListX() {
         return arrayList;
+    }
+
+    /**
+     * @param parameters
+     */
+    public void setArrayListX(int... parameters) {
+        int step = parameters[0];
+// ...
     }
 
 }
