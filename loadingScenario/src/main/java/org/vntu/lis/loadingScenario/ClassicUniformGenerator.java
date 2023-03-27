@@ -5,6 +5,8 @@ import java.util.ArrayList;
 public class ClassicUniformGenerator implements ICoordX {
      final private ArrayList<Long> arrayList = new ArrayList<Long>();
 
+
+
     public void setArrayListX(int number, int period, int series) {
 // Add check for right period later...
         long step = (long) period/number;
@@ -16,6 +18,8 @@ public class ClassicUniformGenerator implements ICoordX {
                 this.arrayList.add((long) count * step + period * localSeries);
     }
 
+
+
     public ArrayList<Long> getArrayListX() {
         return arrayList;
     }
@@ -23,8 +27,21 @@ public class ClassicUniformGenerator implements ICoordX {
     /**
      * @param parameters
      */
+/*
     public void setArrayListX(int... parameters) {
+// Add check for right period later...
+        int step = parameters[0];
+        int period = parameters[1];
+        int series = parameters[2];
+        int number = period / step;
+
+        int localSeries = -1;
+
+        while (localSeries++ < series - 1)
+            for (int count = 0; count < number; count++)
+                this.arrayList.add((long) count * step + period * localSeries);
 
     }
+*/
 
 }
