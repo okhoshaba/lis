@@ -24,24 +24,4 @@ public class ClassicUniformGenerator implements ICoordX {
         return arrayList;
     }
 
-    /**
-     * @param parameters
-     */
-/*
-    public void setArrayListX(int... parameters) {
-// Add check for right period later...
-        int step = parameters[0];
-        int period = parameters[1];
-        int series = parameters[2];
-        int number = period / step;
-
-        int localSeries = -1;
-
-        while (localSeries++ < series - 1)
-            for (int count = 0; count < number; count++)
-                this.arrayList.add((long) count * step + period * localSeries);
-
-    }
-*/
-
 }
