@@ -64,6 +64,6 @@ public class CoordX {
     }
 
     void defineX() {
-            System.out.println("Coordinates X: " + iCoordX.getArrayListX());
+            System.out.println("Coordinates X: " + iCoordX.getXArrayList());
         }
 }

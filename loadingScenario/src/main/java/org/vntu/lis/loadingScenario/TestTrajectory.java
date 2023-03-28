@@ -17,14 +17,14 @@ public class TestTrajectory {
         System.out.println(coordX.getStep());
 
         ICoordX classicUniformGenerator = new ClassicUniformGenerator();
-        classicUniformGenerator.setArrayListX(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        classicUniformGenerator.setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         System.out.println(classicUniformGenerator.toString());
-        System.out.println(classicUniformGenerator.getArrayListX());
+        System.out.println(classicUniformGenerator.getXArrayList());
 
         ICoordX defineUniformGenerator = new DefineUniformGenerator();
-        defineUniformGenerator.setArrayListX(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
+        defineUniformGenerator.setXArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
         System.out.println(defineUniformGenerator.toString());
-        System.out.println(defineUniformGenerator.getArrayListX());
+        System.out.println(defineUniformGenerator.getXArrayList());
 
         context.close();
     }

@@ -5,23 +5,12 @@ import java.util.ArrayList;
 public class DefineUniformGenerator implements ICoordX {
     final private ArrayList<Long> arrayList = new ArrayList<Long>();
 
-    /**
-     * @param parameters
-     */
-    public void setArrayListX(int... parameters) {
-        int step = parameters[0];
-        int period = parameters[1];
-        int series = parameters[2];
 
-// Working fine !!!
-
-    }
-
-    public ArrayList<Long> getArrayListX() {
+    public ArrayList<Long> getXArrayList() {
         return arrayList;
     }
 
-    public void setArrayListX(int step, int period, int series) {
+    public void setXArrayList(int step, int period, int series) {
         int number = period/step;
 
         int localSeries = -1;

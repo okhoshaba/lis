@@ -7,7 +7,7 @@ public class ClassicUniformGenerator implements ICoordX {
 
 
 
-    public void setArrayListX(int number, int period, int series) {
+    public void setXArrayList(int number, int period, int series) {
 // Add check for right period later...
         long step = (long) period/number;
 
@@ -20,7 +20,7 @@ public class ClassicUniformGenerator implements ICoordX {
 
 
 
-    public ArrayList<Long> getArrayListX() {
+    public ArrayList<Long> getXArrayList() {
         return arrayList;
     }
 

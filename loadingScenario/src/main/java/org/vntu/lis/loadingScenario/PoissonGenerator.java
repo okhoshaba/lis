@@ -5,11 +5,11 @@ import java.util.ArrayList;
 public class PoissonGenerator implements ICoordX {
     ArrayList arrayList = new ArrayList();
 
-    public ArrayList<Long> getArrayListX() {
+    public ArrayList<Long> getXArrayList() {
         return arrayList;
     }
 
-    public void setArrayListX(int firstOption, int secondOption, int thirdOption) {
+    public void setXArrayList(int firstOption, int secondOption, int thirdOption) {
 
     }
 }
