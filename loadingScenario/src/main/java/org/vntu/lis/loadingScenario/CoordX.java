@@ -7,7 +7,7 @@ public class CoordX {
     private ArrayList<Long> arrayListX = new ArrayList<Long>();
 
     private ICoordX iCoordX;
-    private String nameX;
+//    private String nameX;
     private int number, period, series, step;
 
     //IoC
@@ -22,13 +22,13 @@ public class CoordX {
         this.iCoordX = iCoordX;
     }
 
-    public String getNameX() {
-        return nameX;
-    }
+//    public String getNameX() {
+//        return nameX;
+//    }
 
-    public void setNameX(String nameX) {
-        this.nameX = nameX;
-    }
+//    public void setNameX(String nameX) {
+//        this.nameX = nameX;
+//    }
 
     public int getStep() {
         return step;
@@ -62,7 +62,4 @@ public class CoordX {
         this.series = series;
     }
 
-    void defineX() {
-            System.out.println("Coordinates X: " + iCoordX.getXArrayList());
-        }
 }
