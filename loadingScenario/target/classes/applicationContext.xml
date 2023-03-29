@@ -12,14 +12,24 @@
           class="org.vntu.lis.loadingScenario.ClassicUniformGenerator">
     </bean>
 
+    <bean id="yTrajectoryBean"
+          class="org.vntu.lis.loadingScenario.LinearFunction">
+    </bean>
+
     <bean id="coordX"
           class="org.vntu.lis.loadingScenario.CoordX">
         <property name="ICoordX" ref="xTrajectoryBean"/>
-        <property name="nameX" value="${coordX.nameX}"/>
         <property name="step" value="${coordX.step}"/>
         <property name="number" value="${coordX.number}"/>
         <property name="series" value="${coordX.series}"/>
         <property name="period" value="${coordX.period}"/>
+    </bean>
+
+    <bean id="coordY"
+          class="org.vntu.lis.loadingScenario.CoordY">
+        <property name="ICoordY" ref="yTrajectoryBean"/>
+        <property name="xParametr" value="${coordY.xParametr}"/>
+        <property name="bParametr" value="${coordY.bParametr}"/>
     </bean>
 
 

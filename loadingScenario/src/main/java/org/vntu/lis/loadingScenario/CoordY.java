@@ -6,8 +6,7 @@ public class CoordY {
     private ArrayList<Long> arrayList = new ArrayList<Long>();
 
     private ICoordY iCoordY;
-    private String nameY;
-    private double parametrA, parametrB;
+    private double xParametr, bParametr;
 
     public ICoordY getiCoordY() {
         return iCoordY;
@@ -17,27 +16,23 @@ public class CoordY {
         this.iCoordY = iCoordY;
     }
 
-    public String getNameY() {
-        return nameY;
+    public double getxParametr() {
+        return xParametr;
     }
 
-    public void setNameY(String nameY) {
-        this.nameY = nameY;
+    public void setxParametr(double xParametr) {
+        this.xParametr = xParametr;
     }
 
-    public double getParametrA() {
-        return parametrA;
+    public double getbParametr() {
+        return bParametr;
     }
 
-    public void setParametrA(double parametrA) {
-        this.parametrA = parametrA;
+    public void setbParametr(double bParametr) {
+        this.bParametr = bParametr;
     }
 
-    public double getParametrB() {
-        return parametrB;
-    }
-
-    public void setParametrB(double parametrB) {
-        this.parametrB = parametrB;
+    // !!! Change for another Class !!!
+    public void setICoordY(LinearFunction iCoordY) {
     }
 }
