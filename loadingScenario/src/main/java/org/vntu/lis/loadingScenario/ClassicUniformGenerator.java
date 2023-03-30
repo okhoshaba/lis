@@ -5,6 +5,10 @@ import java.util.ArrayList;
 public class ClassicUniformGenerator implements ICoordX {
      final private ArrayList<Long> arrayList = new ArrayList<Long>();
 
+    @Override
+    public void downloadContext() {
+        System.out.println("Downloading Context from ClassicUniformGenerator");
+    }
 
 
     public void setXArrayList(int number, int period, int series) {

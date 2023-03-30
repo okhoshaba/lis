@@ -10,6 +10,11 @@ public class DefineUniformGenerator implements ICoordX {
         return arrayList;
     }
 
+    @Override
+    public void downloadContext() {
+        System.out.println("Downloading Context from DefineUniformGenerator");
+    }
+
     public void setXArrayList(int step, int period, int series) {
         int number = period/step;
 

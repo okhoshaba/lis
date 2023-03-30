@@ -1,5 +1,7 @@
 package org.vntu.lis.loadingScenario;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.ArrayList;
 
 public class CoordX {
@@ -29,6 +31,19 @@ public class CoordX {
 //    public void setNameX(String nameX) {
 //        this.nameX = nameX;
 //    }
+
+    public static void getContext() {
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "coordinatesContext.xml"
+        );
+
+        CoordX coordX = context.getBean("coordX", CoordX.class);
+        CoordY coordY = context.getBean("coordY", CoordY.class);
+
+        context.close();
+
+    }
+
 
     public int getStep() {
         return step;
