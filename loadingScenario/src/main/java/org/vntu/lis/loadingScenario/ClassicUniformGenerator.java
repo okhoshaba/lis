@@ -14,6 +14,8 @@ public class ClassicUniformGenerator implements ICoordX {
         );
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
+        context.close();
+//        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
         setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
