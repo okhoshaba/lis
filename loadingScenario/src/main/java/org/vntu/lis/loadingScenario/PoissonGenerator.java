@@ -1,5 +1,7 @@
 package org.vntu.lis.loadingScenario;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.ArrayList;
 
 public class PoissonGenerator implements ICoordX {
@@ -7,7 +9,16 @@ public class PoissonGenerator implements ICoordX {
 
     @Override
     public void downloadContext() {
-        System.out.println("Downloading Context from PoissonGenerator");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        CoordX coordX = context.getBean("coordX", CoordX.class);
+        setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        System.out.println("New Coordinate X (in PoissonGenerator): " + getXArrayList());
+
+//        System.out.println("Downloading Context from PoissonGenerator");
+
     }
 
     public ArrayList<Long> getXArrayList() {

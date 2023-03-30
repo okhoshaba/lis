@@ -1,5 +1,7 @@
 package org.vntu.lis.loadingScenario;
 
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 import java.util.ArrayList;
 
 public class DefineUniformGenerator implements ICoordX {
@@ -12,7 +14,13 @@ public class DefineUniformGenerator implements ICoordX {
 
     @Override
     public void downloadContext() {
-        System.out.println("Downloading Context from DefineUniformGenerator");
+        ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
+                "applicationContext.xml"
+        );
+
+        CoordX coordX = context.getBean("coordX", CoordX.class);
+        setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        System.out.println("New Coordinate X (in DefineUniformGenerator): " + getXArrayList());
     }
 
     public void setXArrayList(int step, int period, int series) {

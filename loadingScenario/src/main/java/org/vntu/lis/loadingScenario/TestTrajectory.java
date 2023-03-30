@@ -24,16 +24,16 @@ public class TestTrajectory {
         // For diagnose only
         ICoordX classicUniformGenerator = new ClassicUniformGenerator();
         classicUniformGenerator.downloadContext();
-//        classicUniformGenerator.getContext();
-        classicUniformGenerator.setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
-        System.out.println("Coordinate X (in ClassicGenerator): " + classicUniformGenerator.getXArrayList());
 
         // Business Logics for DefineUniformGenerator
         // For diagnose only
         ICoordX defineUniformGenerator = new DefineUniformGenerator();
         defineUniformGenerator.downloadContext();
-        defineUniformGenerator.setXArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
-        System.out.println("Coordinate X (in UniformGenerator): " + defineUniformGenerator.getXArrayList());
+//        defineUniformGenerator.setXArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
+//        System.out.println("Coordinate X (in UniformGenerator): " + defineUniformGenerator.getXArrayList());
+
+        ICoordX poissonGenerator = new PoissonGenerator();
+        poissonGenerator.downloadContext();
 
     }
 }
