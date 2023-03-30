@@ -5,6 +5,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 public class TestTrajectory {
     public static void main(String[] args) {
 
+/*
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "coordinatesContext.xml"
         );
@@ -12,6 +13,7 @@ public class TestTrajectory {
         CoordX coordX = context.getBean("coordX", CoordX.class);
         CoordY coordY = context.getBean("coordY", CoordY.class);
         context.close();
+*/
 
 
         // For diagnose purposes only  ??? It needs to be in a separate group
@@ -35,5 +37,7 @@ public class TestTrajectory {
         ICoordX poissonGenerator = new PoissonGenerator();
         poissonGenerator.downloadContext();
 
+        ICoordY polynomialFunction = new PolynomialFunction();
+        polynomialFunction.downloadContext();
     }
 }

@@ -15,6 +15,7 @@ public class PoissonGenerator implements ICoordX {
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
         setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        // For Diagnostic purposes only
         System.out.println("New Coordinate X (in PoissonGenerator): " + getXArrayList());
 
 //        System.out.println("Downloading Context from PoissonGenerator");

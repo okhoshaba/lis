@@ -16,12 +16,12 @@ public class PolynomialFunction implements ICoordY {
     @Override
     public void downloadContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "coordinatesContext.xml"
         );
 
         CoordY coordY = context.getBean("coordY", CoordY.class);
-//        setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
-        System.out.println("New Coordinate Y (in ClassicGenerator): ");
+        // For Diagnostic purposes only
+        System.out.println("Coordinate Y for PolynomialFunction: " + getbParametr());
 
     }
 
@@ -41,4 +41,19 @@ public class PolynomialFunction implements ICoordY {
         return x3Parametr;
     }
 
+    public void setbParametr(double bParametr) {
+        this.bParametr = bParametr;
+    }
+
+    public void setxParametr(double xParametr) {
+        this.xParametr = xParametr;
+    }
+
+    public void setX2Parametr(double x2Parametr) {
+        this.x2Parametr = x2Parametr;
+    }
+
+    public void setX3Parametr(double x3Parametr) {
+        this.x3Parametr = x3Parametr;
+    }
 }
