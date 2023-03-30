@@ -6,7 +6,7 @@ public class TestTrajectory {
     public static void main(String[] args) {
 
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "coordinatesContext.xml"
         );
 
         CoordX coordX = context.getBean("coordX", CoordX.class);

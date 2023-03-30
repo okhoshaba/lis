@@ -33,6 +33,6 @@ public class CoordY {
     }
 
     // !!! Change for another Class !!!
-    public void setICoordY(LinearFunction iCoordY) {
+    public void setICoordY(PolynomialFunction iCoordY) {
     }
 }
