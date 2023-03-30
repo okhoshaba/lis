@@ -15,7 +15,7 @@ public class DefineUniformGenerator implements ICoordX {
     @Override
     public void downloadContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "coordinatesContext.xml"
         );
 
         CoordX coordX = context.getBean("coordX", CoordX.class);

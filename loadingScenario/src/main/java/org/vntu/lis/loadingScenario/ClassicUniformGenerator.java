@@ -10,14 +10,13 @@ public class ClassicUniformGenerator implements ICoordX {
     @Override
     public void downloadContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
-                "applicationContext.xml"
+                "coordinatesContext.xml"
         );
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
         setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
 
-        //        System.out.println("Downloading Context from ClassicUniformGenerator:  " + coordX.getPeriod());
     }
 
 
