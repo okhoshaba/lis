@@ -1,9 +1,9 @@
 Loading Scenario
 
 What to do:
-Line generator
-Parabolic generator
-Hyperbolic Generator
+LineScenario
+ParabolicScenario
+HyperbolicScenario
 
 Example for: github latex readme example 
 This sentence uses `$` delimiters to show math inline:  $\sqrt{3x-1}+(1+x)^2$
