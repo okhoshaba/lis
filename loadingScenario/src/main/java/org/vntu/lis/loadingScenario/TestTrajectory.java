@@ -18,7 +18,12 @@ public class TestTrajectory {
         ICoordX poissonGenerator = new PoissonGenerator();
         poissonGenerator.downloadContext();
 
-        ICoordY polynomialFunction = new PolynomialFunction();
-        polynomialFunction.downloadContext();
+        ICoordY polynomialScenario = new PolynomialScenario();
+        polynomialScenario.downloadContext();
+// In the future... do private... export to csv or xml ...
+        polynomialScenario.getYArrayList();
+
+//        ICoordY polynomialFunction = new PolynomialFunction();
+//        polynomialFunction.downloadContext();
     }
 }

@@ -5,11 +5,16 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.ArrayList;
 
 public class PolynomialScenario implements ICoordY {
+
+//    CoordX coordX;
+    CoordY coordY;
+
     double bParametr, xParametr, x2Parametr, x3Parametr;
     /**
      * @return
      */
     public ArrayList<Long> getYArrayList() {
+        System.out.println("Coordinate Y for PolynomialScenario: " + coordY.getbParametr());
         return null;
     }
 
@@ -19,11 +24,11 @@ public class PolynomialScenario implements ICoordY {
                 "coordinatesContext.xml"
         );
 
-        CoordY coordY = context.getBean("coordY", CoordY.class);
+//        coordX = context.getBean("coordX", CoordX.class);
+        coordY = context.getBean("coordY", CoordY.class);
         context.close();
         // For Diagnostic purposes only
 //        System.out.println("Varibales in PolynomialFunction: " + coordY.getbParametr() + " " + coordY.getxParametr());
-        System.out.println("Coordinate Y for PolynomialFunction: " + coordY.getbParametr());
 
     }
 
