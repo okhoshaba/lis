@@ -8,6 +8,7 @@ public class LineScenario {
     private ArrayList<Long> arrayListY = new ArrayList<Long>();
 
     public LineScenario() {
+        // Download all coordinate parameters from configuration file (coordinatesContext.xml)
         defineUniformGenerator.downloadContext();
     }
 
@@ -15,6 +16,7 @@ public class LineScenario {
 
     public void calculateScenario() {
         System.out.println("ArrayListX: " + arrayListX);
+        arrayListY.add()
 
     }
 }
