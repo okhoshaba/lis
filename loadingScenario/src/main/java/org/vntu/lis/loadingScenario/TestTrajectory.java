@@ -7,8 +7,9 @@ public class TestTrajectory {
 
         // Business Logics for ClassicUniformGenerator
         // For diagnose only
-        ICoordX classicUniformGenerator = new ClassicUniformGenerator();
-        classicUniformGenerator.downloadContext();
+//        ICoordX classicUniformGenerator = new ClassicUniformGenerator();
+//        classicUniformGenerator.downloadContext();
+        LineScenario lineScenario = new LineScenario();
 
         // Business Logics for DefineUniformGenerator
         // For diagnose only

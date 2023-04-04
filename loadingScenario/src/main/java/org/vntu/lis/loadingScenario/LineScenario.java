@@ -1,7 +1,12 @@
 package org.vntu.lis.loadingScenario;
 
 public class LineScenario {
-    ICoordX classicUniformGenerator = new ClassicUniformGenerator();
+    private ICoordX classicUniformGenerator;
+    public LineScenario() {
+        classicUniformGenerator = new ClassicUniformGenerator();
+        classicUniformGenerator.downloadContext();
+
+    }
 
 
 //    classicUniformGenerator.downloadContext();
