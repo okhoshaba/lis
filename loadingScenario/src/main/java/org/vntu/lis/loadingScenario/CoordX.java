@@ -36,7 +36,6 @@ public class CoordX {
 
     }
 
-
     public int getStep() {
         return step;
     }

@@ -5,7 +5,6 @@ import java.util.Iterator;
 
 public class LineScenario {
     private ICoordX defineUniformGenerator = new DefineUniformGenerator();
-    private CoordY coordY;
 
     private ArrayList<Long> arrayListY = new ArrayList<Long>();
 
