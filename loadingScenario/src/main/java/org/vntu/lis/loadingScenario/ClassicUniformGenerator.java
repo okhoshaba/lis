@@ -34,6 +34,12 @@ public class ClassicUniformGenerator implements ICoordX {
                 this.arrayList.add((long) count * step + period * localSeries);
     }
 
+    @Override
+    public String toString() {
+        return "ClassicUniformGenerator{" +
+                "arrayList=" + arrayList +
+                '}';
+    }
 
     public ArrayList<Long> getXArrayList() {
         return arrayList;
