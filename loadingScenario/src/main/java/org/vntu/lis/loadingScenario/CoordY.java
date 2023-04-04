@@ -6,7 +6,7 @@ public class CoordY {
     private ArrayList<Long> arrayList = new ArrayList<Long>();
 
     private ICoordY iCoordY;
-    private double xParametr, bParametr;
+    private double xParametr, aParametr, bParametr;
 
     public ICoordY getiCoordY() {
         return iCoordY;
@@ -14,6 +14,14 @@ public class CoordY {
 
     public void setiCoordY(ICoordY iCoordY) {
         this.iCoordY = iCoordY;
+    }
+
+    public double getaParametr() {
+        return aParametr;
+    }
+
+    public void setaParametr(double aParametr) {
+        this.aParametr = aParametr;
     }
 
     public double getxParametr() {

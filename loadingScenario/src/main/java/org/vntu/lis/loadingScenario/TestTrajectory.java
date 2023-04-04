@@ -13,9 +13,12 @@ public class TestTrajectory {
 
         // Business Logics for DefineUniformGenerator
         // For diagnose only
-        ICoordX defineUniformGenerator = new DefineUniformGenerator();
-        defineUniformGenerator.downloadContext();
-//        LineScenario lineScenario = new LineScenario();
+//        ICoordX defineUniformGenerator = new DefineUniformGenerator();
+//        defineUniformGenerator.downloadContext();
+
+        LineScenario lineScenario = new LineScenario();
+        System.out.println(lineScenario.toString());
+        lineScenario.calculateScenario();
 //        lineScenario.toString();
 
         ICoordX poissonGenerator = new PoissonGenerator();

@@ -20,10 +20,7 @@ public class DefineUniformGenerator implements ICoordX {
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
         context.close();
-//        System.out.println("Varibales in DefineUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
         setXArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
-        // For Diagnostic purposes only
-        System.out.println("New Coordinate X (in DefineUniformGenerator): " + getXArrayList());
     }
 
     public void setXArrayList(int step, int period, int series) {
@@ -31,10 +28,15 @@ public class DefineUniformGenerator implements ICoordX {
 
         int localSeries = -1;
 
-        // Check it!
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++)
                 this.arrayList.add((long) count * step + period * localSeries);
     }
 
+    @Override
+    public String toString() {
+        return "DefineUniformGenerator{" +
+                "arrayList=" + arrayList +
+                '}';
+    }
 }

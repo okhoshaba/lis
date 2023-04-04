@@ -24,14 +24,6 @@ public class CoordX {
         this.iCoordX = iCoordX;
     }
 
-//    public String getNameX() {
-//        return nameX;
-//    }
-
-//    public void setNameX(String nameX) {
-//        this.nameX = nameX;
-//    }
-
     public static void getContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
                 "coordinatesContext.xml"
