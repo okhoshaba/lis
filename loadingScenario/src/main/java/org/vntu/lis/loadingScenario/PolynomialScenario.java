@@ -24,7 +24,6 @@ public class PolynomialScenario implements ICoordY {
                 "coordinatesContext.xml"
         );
 
-//        coordX = context.getBean("coordX", CoordX.class);
         coordY = context.getBean("coordY", CoordY.class);
         context.close();
         // For Diagnostic purposes only
