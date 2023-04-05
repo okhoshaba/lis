@@ -5,12 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.ArrayList;
 
 public class DefineUniformGenerator implements ICoordX {
-    final private ArrayList<Long> arrayList = new ArrayList<Long>();
+    final private ArrayList<Long> xArrayList = new ArrayList<Long>();
+    final private ArrayList<Double> yArrayList = new ArrayList<Double>();
 
-
-    public ArrayList<Long> getXArrayList() {
-        return arrayList;
-    }
+    private CoordX coordX;
+    private  CoordY coordY;
 
     @Override
     public void downloadContext() {
@@ -18,25 +17,50 @@ public class DefineUniformGenerator implements ICoordX {
                 "coordinatesContext.xml"
         );
 
-        CoordX coordX = context.getBean("coordX", CoordX.class);
+        this.coordX = context.getBean("coordX", CoordX.class);
+        this.coordY = context.getBean("coordY", CoordY.class);
+
         context.close();
-        setXYArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
+        // For Diagnostics only:
+//        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
+        System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getC0Parametr() + " a = " + coordY.getC1Parametr());
+        setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        // For Diagnostic purposes only
+        System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
+        System.out.println("New Coordinate Y (in ClassicGenerator): " + getYArrayList());
     }
 
-    public void setXYArrayList(int step, int period, int series) {
-        int number = period/step;
+
+    public void setXYArrayList(int number, int period, int series) {
+// Add check for right period later...
+        long step = (long) period / number;
+        long xParameter;
+        double yParameter;
 
         int localSeries = -1;
 
         while (localSeries++ < series - 1)
-            for (int count = 0; count < number; count++)
-                this.arrayList.add((long) count * step + period * localSeries);
+            for (int count = 0; count < number; count++) {
+                xParameter = (long) count * step + period * localSeries;
+                yParameter = xParameter * coordY.getC1Parametr() + coordY.getC0Parametr();
+                this.xArrayList.add(xParameter);
+                this.yArrayList.add(yParameter);
+            }
     }
 
     @Override
     public String toString() {
         return "DefineUniformGenerator{" +
-                "arrayList=" + arrayList +
+                "arrayList=" + xArrayList +
                 '}';
     }
+
+    public ArrayList<Long> getXArrayList() {
+        return xArrayList;
+    }
+
+    public ArrayList<Double> getYArrayList() {
+        return yArrayList;
+    }
+
 }
