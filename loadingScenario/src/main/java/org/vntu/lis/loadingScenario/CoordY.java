@@ -49,6 +49,6 @@ public class CoordY {
     }
 
     // !!! Change for another Class !!!
-    public void setICoordY(PolynomialFunction iCoordY) {
-    }
+//    public void setICoordY(PolynomialFunction iCoordY) {
+//    }
 }
