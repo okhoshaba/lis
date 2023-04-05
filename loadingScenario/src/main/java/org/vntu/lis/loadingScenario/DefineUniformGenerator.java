@@ -22,12 +22,11 @@ public class DefineUniformGenerator implements ICoordX {
 
         context.close();
         // For Diagnostics only:
-//        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
-        System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getC0Parametr() + " a = " + coordY.getC1Parametr());
+        System.out.println("Varibales Y in DefineUniformGenerator: b = " + coordY.getC0Parametr() + " a = " + coordY.getC1Parametr());
         setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
-        System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
-        System.out.println("New Coordinate Y (in ClassicGenerator): " + getYArrayList());
+        System.out.println("New Coordinate X (in DefineUniformGenerator): " + getXArrayList());
+        System.out.println("New Coordinate Y (in DefineUniformGenerator): " + getYArrayList());
     }
 
 

@@ -48,7 +48,7 @@ public class CoordY {
         this.c3Parametr = c3Parametr;
     }
 
-    public void setICoordY(ClassicUniformGenerator iCoordY) {
+    public void setICoordY(DefineUniformGenerator iCoordY) {
     }
 
     // !!! Change for another Class !!!

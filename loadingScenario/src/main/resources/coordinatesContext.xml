@@ -9,11 +9,11 @@
 
     <context:property-placeholder location="classpath:coordinates.properties"/>
     <bean id="xTrajectoryBean"
-          class="org.vntu.lis.loadingScenario.ClassicUniformGenerator">
+          class="org.vntu.lis.loadingScenario.DefineUniformGenerator">
     </bean>
 
     <bean id="yTrajectoryBean"
-          class="org.vntu.lis.loadingScenario.ClassicUniformGenerator">
+          class="org.vntu.lis.loadingScenario.DefineUniformGenerator">
     </bean>
 
     <bean id="coordX"
