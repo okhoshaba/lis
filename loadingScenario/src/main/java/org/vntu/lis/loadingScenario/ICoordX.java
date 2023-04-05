@@ -6,5 +6,5 @@ public interface ICoordX {
 
     void downloadContext();
     ArrayList<Long> getXArrayList();
-    void setXArrayList(int firstOption, int secondOption, int thirdOption);
+    void setXYArrayList(int firstOption, int secondOption, int thirdOption);
 }

@@ -20,10 +20,10 @@ public class DefineUniformGenerator implements ICoordX {
 
         CoordX coordX = context.getBean("coordX", CoordX.class);
         context.close();
-        setXArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
+        setXYArrayList(coordX.getStep(), coordX.getPeriod(), coordX.getSeries());
     }
 
-    public void setXArrayList(int step, int period, int series) {
+    public void setXYArrayList(int step, int period, int series) {
         int number = period/step;
 
         int localSeries = -1;

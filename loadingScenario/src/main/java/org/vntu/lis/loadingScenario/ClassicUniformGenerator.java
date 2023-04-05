@@ -21,23 +21,31 @@ public class ClassicUniformGenerator implements ICoordX {
         this.coordY = context.getBean("coordY", CoordY.class);
 
         context.close();
+        // For Diagnostics only:
 //        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
         System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getbParametr() + "  x = " + coordY.getxParametr() + " a = " + coordY.getaParametr());
-        setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
+        System.out.println("New Coordinate Y (in ClassicGenerator): " + getYArrayList());
     }
 
 
-    public void setXArrayList(int number, int period, int series) {
+    public void setXYArrayList(int number, int period, int series) {
 // Add check for right period later...
         long step = (long) period / number;
+        long xParameter;
+        double yParameter;
 
         int localSeries = -1;
 
         while (localSeries++ < series - 1)
-            for (int count = 0; count < number; count++)
-                this.xArrayList.add((long) count * step + period * localSeries);
+            for (int count = 0; count < number; count++) {
+                xParameter = (long) count * step + period * localSeries;
+                yParameter = (long) ((long) xParameter + coordY.getbParametr());
+                this.xArrayList.add(xParameter);
+                this.yArrayList.add((long) yParameter);
+            }
     }
 
     @Override
@@ -49,6 +57,10 @@ public class ClassicUniformGenerator implements ICoordX {
 
     public ArrayList<Long> getXArrayList() {
         return xArrayList;
+    }
+
+    public ArrayList<Long> getYArrayList() {
+        return yArrayList;
     }
 
 }
