@@ -42,7 +42,7 @@ public class ClassicUniformGenerator implements ICoordX {
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++) {
                 xParameter = (long) count * step + period * localSeries;
-                yParameter = xParameter + coordY.getbParametr();
+                yParameter = xParameter * coordY.getaParametr() + coordY.getbParametr();
                 this.xArrayList.add(xParameter);
                 this.yArrayList.add(yParameter);
             }
