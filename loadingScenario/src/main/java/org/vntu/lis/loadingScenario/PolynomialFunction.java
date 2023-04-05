@@ -23,7 +23,7 @@ public class PolynomialFunction implements ICoordY {
         context.close();
         // For Diagnostic purposes only
 //        System.out.println("Varibales in PolynomialFunction: " + coordY.getbParametr() + " " + coordY.getxParametr());
-        System.out.println("Coordinate Y for PolynomialFunction: " + coordY.getbParametr());
+        System.out.println("Coordinate Y for PolynomialFunction: " + coordY.getC0Parametr());
 
     }
 

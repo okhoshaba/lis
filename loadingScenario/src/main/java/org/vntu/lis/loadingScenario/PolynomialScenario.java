@@ -14,7 +14,7 @@ public class PolynomialScenario implements ICoordY {
      * @return
      */
     public ArrayList<Long> getYArrayList() {
-        System.out.println("Coordinate Y for PolynomialScenario: " + coordY.getbParametr());
+        System.out.println("Coordinate Y for PolynomialScenario: " + coordY.getC0Parametr());
         return null;
     }
 
