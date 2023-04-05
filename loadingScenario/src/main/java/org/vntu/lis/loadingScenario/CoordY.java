@@ -48,6 +48,9 @@ public class CoordY {
         this.c3Parametr = c3Parametr;
     }
 
+    public void setICoordY(ClassicUniformGenerator iCoordY) {
+    }
+
     // !!! Change for another Class !!!
 //    public void setICoordY(PolynomialFunction iCoordY) {
 //    }
