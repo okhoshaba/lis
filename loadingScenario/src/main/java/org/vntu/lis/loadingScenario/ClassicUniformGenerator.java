@@ -5,7 +5,11 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import java.util.ArrayList;
 
 public class ClassicUniformGenerator implements ICoordX {
-    final private ArrayList<Long> arrayList = new ArrayList<Long>();
+    final private ArrayList<Long> xArrayList = new ArrayList<Long>();
+    final private ArrayList<Long> yArrayList = new ArrayList<Long>();
+
+    private CoordX coordX;
+    private  CoordY coordY;
 
     @Override
     public void downloadContext() {
@@ -13,13 +17,15 @@ public class ClassicUniformGenerator implements ICoordX {
                 "coordinatesContext.xml"
         );
 
-        CoordX coordX = context.getBean("coordX", CoordX.class);
+        this.coordX = context.getBean("coordX", CoordX.class);
+        this.coordY = context.getBean("coordY", CoordY.class);
+
         context.close();
 //        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
+        System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getbParametr() + "  x = " + coordY.getxParametr() + " a = " + coordY.getaParametr());
         setXArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
-
     }
 
 
@@ -31,18 +37,18 @@ public class ClassicUniformGenerator implements ICoordX {
 
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++)
-                this.arrayList.add((long) count * step + period * localSeries);
+                this.xArrayList.add((long) count * step + period * localSeries);
     }
 
     @Override
     public String toString() {
         return "ClassicUniformGenerator{" +
-                "arrayList=" + arrayList +
+                "arrayList=" + xArrayList +
                 '}';
     }
 
     public ArrayList<Long> getXArrayList() {
-        return arrayList;
+        return xArrayList;
     }
 
 }
