@@ -30,6 +30,5 @@
         <property name="ICoordY" ref="yTrajectoryBean"/>
         <property name="aParametr" value="${coordY.aParametr}"/>
         <property name="bParametr" value="${coordY.bParametr}"/>
-        <property name="xParametr" value="${coordY.xParametr}"/>
     </bean>
 </beans>

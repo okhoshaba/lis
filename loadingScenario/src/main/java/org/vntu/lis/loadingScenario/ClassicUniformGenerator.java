@@ -23,7 +23,7 @@ public class ClassicUniformGenerator implements ICoordX {
         context.close();
         // For Diagnostics only:
 //        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
-        System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getbParametr() + "  x = " + coordY.getxParametr() + " a = " + coordY.getaParametr());
+        System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getbParametr() + " a = " + coordY.getaParametr());
         setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in ClassicGenerator): " + getXArrayList());
