@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class ClassicUniformGenerator implements ICoordX {
     final private ArrayList<Long> xArrayList = new ArrayList<Long>();
-    final private ArrayList<Long> yArrayList = new ArrayList<Long>();
+    final private ArrayList<Double> yArrayList = new ArrayList<Double>();
 
     private CoordX coordX;
     private  CoordY coordY;
@@ -42,9 +42,9 @@ public class ClassicUniformGenerator implements ICoordX {
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++) {
                 xParameter = (long) count * step + period * localSeries;
-                yParameter = (long) ((long) xParameter + coordY.getbParametr());
+                yParameter = xParameter + coordY.getbParametr();
                 this.xArrayList.add(xParameter);
-                this.yArrayList.add((long) yParameter);
+                this.yArrayList.add(yParameter);
             }
     }
 
@@ -59,7 +59,7 @@ public class ClassicUniformGenerator implements ICoordX {
         return xArrayList;
     }
 
-    public ArrayList<Long> getYArrayList() {
+    public ArrayList<Double> getYArrayList() {
         return yArrayList;
     }
 
