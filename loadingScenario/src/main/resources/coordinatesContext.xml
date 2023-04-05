@@ -29,6 +29,8 @@
           class="org.vntu.lis.loadingScenario.CoordY">
         <property name="ICoordY" ref="yTrajectoryBean"/>
         <property name="c1Parametr" value="${coordY.c1Parametr}"/>
+        <property name="c2Parametr" value="${coordY.c2Parametr}"/>
+        <property name="c3Parametr" value="${coordY.c3Parametr}"/>
         <property name="c0Parametr" value="${coordY.c0Parametr}"/>
     </bean>
 </beans>
