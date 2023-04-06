@@ -34,37 +34,21 @@ public class ClassicUniformGenerator implements ICoordX {
 
     public void setXYArrayList(int number, int period, int series) {
 
-        int min = 1;
-        int max = period;
-        int range = max - min + 1;
-        Random rand = new Random();
-
-        for (int i = 0; i < 10; i++) {
-            int randNum = (int)(rand.nextDouble() * range) + min;
-            this.xArrayList.add((long) randNum);
-            this.yArrayList.add(1.0);
-//            System.out.println(randNum);
-        }
-        Collections.sort(this.xArrayList);
-
-// Add check for right period later...
-//  ??? May be later ???
-
-/*
-        long step = (long) period / number;
-        long xParameter;
-        double yParameter;
+        int minValue = 1;
+        int maxValue = period;
+        int rangeValue = maxValue - minValue + 1;
+        Random random = new Random();
 
         int localSeries = -1;
 
-        while (localSeries++ < series - 1)
+        while (localSeries++ < series - 1) {
             for (int count = 0; count < number; count++) {
-                xParameter = (long) count * step + period * localSeries;
-                yParameter = xParameter * coordY.getC1Parametr() + coordY.getC0Parametr();
-                this.xArrayList.add(xParameter);
-                this.yArrayList.add(yParameter);
+                int randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
+                this.xArrayList.add((long) randomNumber);
+                this.yArrayList.add(1.0);
             }
-*/
+            Collections.sort(this.xArrayList);
+        }
     }
 
     @Override
