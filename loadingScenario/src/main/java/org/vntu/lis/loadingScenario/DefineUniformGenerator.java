@@ -4,6 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 
+// The DefineUniformGenerator class uses deterministic exploration methods.
 public class DefineUniformGenerator implements ICoordX {
     final private ArrayList<Long> xArrayList = new ArrayList<Long>();
     final private ArrayList<Double> yArrayList = new ArrayList<Double>();
