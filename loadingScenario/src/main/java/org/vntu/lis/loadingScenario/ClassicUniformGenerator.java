@@ -41,13 +41,17 @@ public class ClassicUniformGenerator implements ICoordX {
 
         int localSeries = -1;
 
-        while (localSeries++ < series - 1)
+        while (localSeries++ < series - 1) {
+            ArrayList<Long> tempArrayList = new ArrayList<Long>();
+
             for (int count = 0; count < number; count++) {
                 int randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
-                this.xArrayList.add((long) randomNumber);
+                tempArrayList.add((long) randomNumber);
                 this.yArrayList.add(1.0);
             }
-            Collections.sort(this.xArrayList);
+            Collections.sort(tempArrayList);
+            this.xArrayList.addAll(tempArrayList);
+        }
     }
 
     @Override
