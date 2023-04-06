@@ -4,6 +4,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 import java.util.ArrayList;
 
+// The ClassicUniformGenerator class uses probabilistic exploration methods.
 public class ClassicUniformGenerator implements ICoordX {
     final private ArrayList<Long> xArrayList = new ArrayList<Long>();
     final private ArrayList<Double> yArrayList = new ArrayList<Double>();
