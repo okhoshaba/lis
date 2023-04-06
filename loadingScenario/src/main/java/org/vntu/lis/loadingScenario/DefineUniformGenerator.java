@@ -41,7 +41,7 @@ public class DefineUniformGenerator implements ICoordX {
         while (localSeries++ < series - 1)
             for (int count = 0; count < number; count++) {
                 xParameter = (long) count * step + period * localSeries;
-                yParameter = xParameter * coordY.getC1Parametr() + coordY.getC0Parametr();
+                yParameter = coordY.getC0Parametr() + xParameter * coordY.getC1Parametr() + xParameter * coordY.getC2Parametr() + xParameter * coordY.getC3Parametr();
                 this.xArrayList.add(xParameter);
                 this.yArrayList.add(yParameter);
             }
