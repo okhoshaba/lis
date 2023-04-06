@@ -7,8 +7,8 @@ public class TestTrajectory {
         public static void main(String[] args) {
 
         // Business Logics for ClassicUniformGenerator
-//        ICoordX classicUniformGenerator = new ClassicUniformGenerator();
-//        classicUniformGenerator.downloadContext();
+        ICoordX classicUniformGenerator = new ClassicUniformGenerator();
+        classicUniformGenerator.downloadContext();
 
         ICoordX defineUniformGenerator = new DefineUniformGenerator();
         defineUniformGenerator.downloadContext();

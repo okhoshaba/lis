@@ -2,7 +2,7 @@ package org.vntu.lis.loadingScenario;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
-import java.util.ArrayList;
+import java.util.*;
 
 // The ClassicUniformGenerator class uses probabilistic exploration methods.
 public class ClassicUniformGenerator implements ICoordX {
@@ -33,7 +33,24 @@ public class ClassicUniformGenerator implements ICoordX {
 
 
     public void setXYArrayList(int number, int period, int series) {
+
+        int min = 1;
+        int max = period;
+        int range = max - min + 1;
+        Random rand = new Random();
+
+        for (int i = 0; i < 10; i++) {
+            int randNum = (int)(rand.nextDouble() * range) + min;
+            this.xArrayList.add((long) randNum);
+            this.yArrayList.add(1.0);
+//            System.out.println(randNum);
+        }
+        Collections.sort(this.xArrayList);
+
 // Add check for right period later...
+//  ??? May be later ???
+
+/*
         long step = (long) period / number;
         long xParameter;
         double yParameter;
@@ -47,6 +64,7 @@ public class ClassicUniformGenerator implements ICoordX {
                 this.xArrayList.add(xParameter);
                 this.yArrayList.add(yParameter);
             }
+*/
     }
 
     @Override
