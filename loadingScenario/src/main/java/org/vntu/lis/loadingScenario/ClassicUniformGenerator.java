@@ -37,6 +37,8 @@ public class ClassicUniformGenerator implements ICoordX {
         int minValue = 1;
         int maxValue = period;
         int rangeValue = maxValue - minValue + 1;
+        int randomNumber;
+        boolean containsRandomNumber = false;
         Random random = new Random();
 
         int localSeries = -1;
@@ -45,7 +47,10 @@ public class ClassicUniformGenerator implements ICoordX {
             ArrayList<Long> tempArrayList = new ArrayList<Long>();
 
             for (int count = 0; count < number; count++) {
-                int randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
+                do {
+                    randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
+                    containsRandomNumber = tempArrayList.contains((long) randomNumber);
+                } while (containsRandomNumber);
                 tempArrayList.add((long) randomNumber);
                 this.yArrayList.add(1.0);
             }
