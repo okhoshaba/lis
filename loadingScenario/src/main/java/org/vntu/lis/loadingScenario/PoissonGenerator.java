@@ -12,6 +12,9 @@ public class PoissonGenerator implements ICoordX {
     private CoordX coordX;
     private  CoordY coordY;
 
+    private double lambda;
+
+
     @Override
     public void downloadContext() {
         ClassPathXmlApplicationContext context = new ClassPathXmlApplicationContext(
@@ -28,15 +31,16 @@ public class PoissonGenerator implements ICoordX {
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in PoissonGenerator): " + getXArrayList());
         System.out.println("New Coordinate Y (in PoissonGenerator): " + getYArrayList());
-    }
+        }
 
 
     public void setXYArrayList(int number, int period, int series) {
 
-        int minValue = 1;
         int maxValue = period;
-        int rangeValue = maxValue - minValue + 1;
+        int rangeValue = maxValue;
         int randomNumber;
+        double lambda = (double) period / 2;
+
         boolean containsRandomNumber = false;
         Random random = new Random();
 
@@ -48,7 +52,15 @@ public class PoissonGenerator implements ICoordX {
             for (int count = 0; count < number; count++) {
                 // Checking the unique value of a variable
                 do {
-                    randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
+                    randomNumber = 0;
+                    double L = Math.exp(-lambda);
+                    double p = 1.0;
+
+                    do {
+                        randomNumber++;
+                        p *= random.nextDouble();
+                    } while (p > L);
+
                     containsRandomNumber = tempArrayList.contains((long) randomNumber);
                 } while (containsRandomNumber);
                 tempArrayList.add((long) randomNumber);
@@ -57,6 +69,7 @@ public class PoissonGenerator implements ICoordX {
             Collections.sort(tempArrayList);
             this.xArrayList.addAll(tempArrayList);
         }
+
     }
 
     @Override
@@ -73,5 +86,4 @@ public class PoissonGenerator implements ICoordX {
     public ArrayList<Double> getYArrayList() {
         return yArrayList;
     }
-
 }

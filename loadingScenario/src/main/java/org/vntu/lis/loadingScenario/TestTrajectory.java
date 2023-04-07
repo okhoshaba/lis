@@ -14,9 +14,11 @@ public class TestTrajectory {
         ICoordX defineUniformGenerator = new DefineUniformGenerator();
         defineUniformGenerator.downloadContext();
 
+/*
         NewPoissonGenerator newPoissonGenerator = new NewPoissonGenerator();
         for (int i = 0; i < 10; i++) {
             System.out.println(newPoissonGenerator.generate(10.0));
         }
+*/
     }
 }
