@@ -23,7 +23,6 @@ public class ClassicUniformGenerator implements ICoordX {
 
         context.close();
         // For Diagnostics only:
-//        System.out.println("Varibales in ClassicUniformGenerator: " + coordX.getNumber() + " " + coordX.getPeriod() + " " + coordX.getSeries());
         System.out.println("Varibales Y in ClassicUniformGenerator: b = " + coordY.getC0Parametr() + " a = " + coordY.getC1Parametr());
         setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
         // For Diagnostic purposes only
@@ -47,6 +46,7 @@ public class ClassicUniformGenerator implements ICoordX {
             ArrayList<Long> tempArrayList = new ArrayList<Long>();
 
             for (int count = 0; count < number; count++) {
+                // Checking the unique value of a variable
                 do {
                     randomNumber = (int) (random.nextDouble() * rangeValue) + minValue;
                     containsRandomNumber = tempArrayList.contains((long) randomNumber);
