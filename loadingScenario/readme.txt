@@ -1,6 +1,7 @@
 Loading Scenario
 
 What to do:
+write all parameters for all classess in property file
 export to csv or xml
 create containers and web services
 create loadImpact module
