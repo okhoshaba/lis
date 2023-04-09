@@ -23,6 +23,7 @@
         <property name="number" value="${coordX.number}"/>
         <property name="series" value="${coordX.series}"/>
         <property name="period" value="${coordX.period}"/>
+        <property name="mean" value="${coordX.mean}"/>
     </bean>
 
     <bean id="coordY"

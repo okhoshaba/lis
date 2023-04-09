@@ -27,7 +27,7 @@ public class PoissonGenerator implements ICoordX {
         context.close();
         // For Diagnostics only:
         System.out.println("Varibales Y in PoissonGenerator: b = " + coordY.getC0Parametr() + " a = " + coordY.getC1Parametr());
-        setXYArrayList(coordX.getNumber(), coordX.getPeriod(), coordX.getSeries());
+        setXYArrayList(coordX.getNumber(), coordX.getMean(), coordX.getSeries());
         // For Diagnostic purposes only
         System.out.println("New Coordinate X (in PoissonGenerator): " + getXArrayList());
         System.out.println("New Coordinate Y (in PoissonGenerator): " + getYArrayList());

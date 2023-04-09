@@ -10,7 +10,7 @@ public class CoordX {
 
     private ICoordX iCoordX;
 //    private String nameX;
-    private int number, period, series, step;
+    private int number, period, series, step, mean;
 
     //IoC
     public CoordX(ICoordX iCoordX) {
@@ -68,4 +68,11 @@ public class CoordX {
         this.series = series;
     }
 
+    public int getMean() {
+        return mean;
+    }
+
+    public void setMean(int mean) {
+        this.mean = mean;
+    }
 }
