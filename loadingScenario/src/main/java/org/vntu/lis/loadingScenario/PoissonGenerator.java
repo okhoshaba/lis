@@ -86,4 +86,9 @@ public class PoissonGenerator implements ICoordX {
     public ArrayList<Double> getYArrayList() {
         return yArrayList;
     }
+
+    public void writeCsvFile(String csvFileName) {
+        System.out.println("FileName: " + csvFileName);
+    }
+
 }

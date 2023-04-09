@@ -63,4 +63,8 @@ public class DefineUniformGenerator implements ICoordX {
         return yArrayList;
     }
 
+    public void writeCsvFile(String csvFileName) {
+        System.out.println("FileName: " + csvFileName);
+    }
+
 }

@@ -3,6 +3,8 @@ Loading Scenario
 What to do:
 write all parameters for all classess in property file
 export to csv or xml
+https://mkyong.com/java/how-to-export-data-to-csv-file-java/
+
 create containers and web services
 create loadImpact module
 
