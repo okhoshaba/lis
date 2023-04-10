@@ -2,7 +2,13 @@ package org.vntu.lis.loadingScenario;
 
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
+import java.io.FileNotFoundException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.ArrayList;
+import java.io.PrintWriter;
+import java.util.List;
 
 // The DefineUniformGenerator class uses deterministic exploration methods.
 public class DefineUniformGenerator implements ICoordX {
@@ -63,8 +69,37 @@ public class DefineUniformGenerator implements ICoordX {
         return yArrayList;
     }
 
-    public void writeCsvFile(String csvFileName) {
-        System.out.println("FileName: " + csvFileName);
-    }
+//    public void writeCsvFile(String csvFileName) {
+//        System.out.println("FileName: " + csvFileName);
+//    }
 
+    public void writeCsvFile(String csvFileName) {
+        List arrList = new ArrayList<String>();
+        arrList.add("Java");
+        arrList.add("Programming");
+        arrList.add("Language");
+
+        Path output = Paths.get("output.txt");
+        try {
+            Files.write(output, arrList);
+            System.out.println(output.toFile().getParentFile());
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+    // https://www.codeproject.com/Questions/1070466/how-to-write-a-string-arraylist-on-the-file-using
+    public void printArrayListToFile(ArrayList<String> arrayList, String filename) throws FileNotFoundException {
+        ArrayList<Long> xArrayList = getXArrayList();
+
+        PrintWriter writer = null;
+        try {
+            writer = new PrintWriter(filename);
+        } catch (FileNotFoundException e) {
+            throw new RuntimeException(e);
+        }
+        for (Long item : xArrayList) {
+            writer.println(item);
+        }
+        writer.close();
+    }
 }

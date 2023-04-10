@@ -13,6 +13,7 @@ public class TestTrajectory {
 
         ICoordX defineUniformGenerator = new DefineUniformGenerator();
         defineUniformGenerator.downloadContext();
+        defineUniformGenerator.writeCsvFile("aa");
 
 /*
         NewPoissonGenerator newPoissonGenerator = new NewPoissonGenerator();
